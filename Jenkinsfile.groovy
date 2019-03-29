@@ -10,7 +10,7 @@ node {
   stage('Build docker image') {
 
       // Build the docker image
-      app = docker.build("fsadykov/grafana", "-f ${WORKSPACE}/Dockerfile/Dockerfile .")
+      app = docker.build("fsadykov/grafana", "-f ${WORKSPACE}/Dockerfile .")
   }
 
 
