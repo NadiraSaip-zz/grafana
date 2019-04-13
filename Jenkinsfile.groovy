@@ -17,7 +17,7 @@ node {
   stage('Push image') {
 
      // Push docker image to the Docker hub
-      docker.withRegistry('', 'dockerhub-credentials') {
+      docker.withRegistry('', 'murodbey') {
           app.push("0.${BUILD_NUMBER}")
           app.push("latest")
       }
