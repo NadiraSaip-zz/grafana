@@ -10,7 +10,7 @@ node {
   stage('Build docker image') {
 
       // Build the docker image
-      app = docker.build("rameca231190/grafana3", "-f ${WORKSPACE}/Dockerfile .")
+      app = docker.build("rameca231190/grafana2", "-f ${WORKSPACE}/Dockerfile .")
   }
 
 
