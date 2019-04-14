@@ -10,14 +10,14 @@ node {
   stage('Build docker image') {
 
       // Build the docker image
-      app = docker.build("fsadykov/grafana", "-f ${WORKSPACE}/Dockerfile .")
+      app = docker.build("rameca231190/grafana2", "-f ${WORKSPACE}/Dockerfile .")
   }
 
 
   stage('Push image') {
 
      // Push docker image to the Docker hub
-      docker.withRegistry('', 'dockerhub-credentials') {
+      docker.withRegistry('', 'my-dockerhub-credential') {
           app.push("0.${BUILD_NUMBER}")
           app.push("latest")
       }
