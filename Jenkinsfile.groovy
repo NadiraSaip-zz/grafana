@@ -17,7 +17,7 @@ node {
   stage('Push image') {
 
      // Push docker image to the Docker hub
-      docker.withRegistry('', 'sofia') {
+      docker.withRegistry('', 'sofia_docker_credentials') {
           app.push("0.${BUILD_NUMBER}")
           app.push("latest")
       }
